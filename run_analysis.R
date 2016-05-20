@@ -58,4 +58,6 @@ library(dplyr)
 meangroup<-group_by(finaldataset,Activity,Subject)
 tidy<-summarise_each(meangroup,funs(mean))
 
+
+#write the tidy
 write.table(tidy,row.name=FALSE,file="tidy.txt")
